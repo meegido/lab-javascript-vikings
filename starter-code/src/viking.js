@@ -75,3 +75,13 @@ War.prototype.addViking = function(Viking) {
 War.prototype.addSaxon = function(Saxon) {
   this.saxonArmy.push(Saxon);
 }
+
+War.prototype.vikingAttack = function(){
+  var oneSaxon = this.saxonArmy[0];
+  var oneViking = this.vikingArmy[0];
+
+  oneSaxon.receiveDamage(oneViking.strength) ;
+
+  var removeSaxon = this.saxonArmy.pop()
+
+}
